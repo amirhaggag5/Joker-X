@@ -1,66 +1,103 @@
-# Joker-X
+# Joker-X Store
 
-A modern e-commerce storefront built with Next.js 15 and React 19.
+A modern premium storefront built with **Next.js 15**, **React 19**, and **Tailwind CSS**.
 
-## Quick Start
+## Features
 
-1. **Install dependencies:**
+- ✨ Modern, responsive UI with Tailwind CSS
+- 🛒 Product catalog with add-to-cart functionality
+- 🔐 Admin dashboard with order management
+- 📱 Mobile-first design
+- 🚀 Optimized for Vercel deployment
+
+## Tech Stack
+
+- **Framework:** Next.js 15
+- **UI Library:** React 19
+- **Styling:** Tailwind CSS 3.4
+- **Database:** Supabase (PostgreSQL)
+- **Deployment:** Vercel
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js >= 20.6
+- npm or yarn
+
+### Local Development
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/amirhaggag5/Joker-X.git
+   cd Joker-X
+   ```
+
+2. Install dependencies
    ```bash
    npm install
    ```
 
-2. **Set environment variables:**
+3. Set up environment variables
    ```bash
    cp .env.example .env.local
+   # Edit .env.local with your Supabase credentials
    ```
 
-3. **Run the development server:**
+4. Run the development server
    ```bash
    npm run dev
    ```
 
-4. **Open in browser:**
-   ```
-   http://localhost:3000
-   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Pages
-
-- **Home** - Product showcase and featured collection
-- **Shop** - Full product catalog
-- **Cart** - Shopping cart with localStorage persistence
-- **Login** - Authentication page (demo)
-- **Admin** - Admin dashboard with order management
-
-## Features
-
-✅ Modern React 19 UI  
-✅ Next.js 15 App Router  
-✅ LocalStorage Cart  
-✅ Responsive Design  
-✅ Product Cards  
-✅ Admin Dashboard  
-✅ TypeScript  
-✅ Supabase Ready  
-
-## Tech Stack
-
-- Next.js 15
-- React 19
-- TypeScript
-- CSS Grid/Flexbox
-- Supabase (optional)
-
-## Deployment
-
-Deploy to Vercel:
+### Build for Production
 
 ```bash
 npm run build
 npm start
 ```
 
-Or push to GitHub and connect with Vercel for auto-deployment.
+## Environment Variables
+
+Create a `.env.local` file with the following variables:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+NEXT_PUBLIC_SITE_URL=your_site_url
+```
+
+## Deployment on Vercel
+
+1. Push your code to GitHub
+2. Go to [Vercel](https://vercel.com)
+3. Create a new project and select your repository
+4. Add environment variables in project settings
+5. Deploy!
+
+## Project Structure
+
+```
+├── app/                 # Next.js app directory
+│   ├── page.tsx        # Home page
+│   ├── layout.tsx      # Root layout
+│   ├── login/          # Login page
+│   ├── admin/          # Admin dashboard
+│   ├── cart/           # Cart page
+│   └── globals.css     # Global styles
+├── components/          # Reusable React components
+├── lib/                # Utility functions and types
+├── public/             # Static assets
+└── styles/             # Additional stylesheets
+```
+
+## Pages
+
+- **/** - Home page with product catalog
+- **/login** - Login page
+- **/admin** - Admin dashboard (requires authentication)
+- **/cart** - Shopping cart
 
 ## License
 
