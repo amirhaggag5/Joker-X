@@ -1,11 +1,11 @@
-import '../app/globals.css';
-import { Header } from '../components/Header';
-import { orders } from '../lib/mock-data';
+import { Header } from "@/components/Header";
+import { orders } from "@/lib/data";
 
 export default function AdminPage() {
   return (
     <main className="page-shell">
       <Header />
+
       <section className="admin-shell">
         <div className="section-heading">
           <div>

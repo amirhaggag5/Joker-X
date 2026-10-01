@@ -1,12 +1,6 @@
-export const metadata = {
-  title: 'Joker-X',
-  description: 'Modern online storefront',
-};
-
-import '../app/globals.css';
-import { Header } from '../components/Header';
-import { ProductCard } from '../components/ProductCard';
-import { products } from '../lib/mock-data';
+import { Header } from "@/components/Header";
+import { ProductCard } from "@/components/ProductCard";
+import { products } from "@/lib/data";
 
 export default function HomePage() {
   return (
@@ -21,17 +15,18 @@ export default function HomePage() {
             Discover premium home, lifestyle, and tech picks built for comfort,
             style, and smarter living.
           </p>
+
           <div className="hero-actions">
-            <a className="primary-btn" href="#catalog">
+            <a href="#catalog" className="primary-btn">
               Shop now
             </a>
-            <a className="secondary-btn" href="/login">
+            <a href="/login" className="secondary-btn">
               Sign in
             </a>
           </div>
         </div>
 
-        <div className="hero-visual" aria-label="Featured products preview">
+        <div className="hero-visual">
           <div className="feature-card large">
             <span>Best seller</span>
             <strong>Joker Pro Lamp</strong>
